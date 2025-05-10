@@ -9,7 +9,8 @@ protected:
     bool btnUpArrow, btnLeftArrow, btnDownArrow, btnRightArrow;
 public:
     Jugador() {};
-	Jugador(int x, int y) : xJ(x), yJ(y) {};
+	Jugador(int x, int y) : xJ(x), yJ(y) {
+    };
 	~Jugador() {};
 
     int returnJugadorX() {
@@ -49,7 +50,7 @@ public:
     };
 
     void dibujaJugador_Izquierda_m1_v1(int x, int y) {
-        p(x + 2, y); b_c(1), f_c(15); cout << char(220) << char(219) << char(219);
+        p(x + 2, y); b_c(8), f_c(15); cout << char(220) << char(219) << char(219);
         p(x, y + 1); cout << char(220) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219);
         p(x, y + 2); cout << char(223) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219);
         p(x + 2, y + 3); cout << char(223) << char(219) << char(219);
@@ -61,7 +62,7 @@ public:
         p(x + 3, y + 3); cout << char(223) << char(219) << char(223);
     }
     void dibujaJugador_Arriba_m1_v1(int x, int y) {
-        p(x + 2, y); b_c(1), f_c(15); cout << char(220) << char(219) << char(219) << char(220);
+        p(x + 2, y); b_c(8), f_c(15); cout << char(220) << char(219) << char(219) << char(220);
         p(x, y + 1); cout << char(220) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(220);
         p(x, y + 2); cout << char(223) << char(223) << char(219) << char(219) << char(219) << char(219) << char(223) << char(223);
         p(x + 2, y + 3); cout << char(219) << char(219) << char(219) << char(219);
@@ -73,7 +74,7 @@ public:
         p(x + 2, y + 3); cout << char(223) << char(219) << char(223);
     }
     void dibujaJugador_Derecha_m1_v1(int x, int y) {
-        p(x + 3, y); b_c(1), f_c(15); cout << char(219) << char(219) << char(220);
+        p(x + 3, y); b_c(8), f_c(15); cout << char(219) << char(219) << char(220);
         p(x, y + 1); cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(220);
         p(x, y + 2); cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(223);
         p(x + 3, y + 3); cout << char(219) << char(219) << char(223);
@@ -85,7 +86,7 @@ public:
         p(x + 2, y + 3); cout << char(220) << char(219) << char(219) << char(219) << char(219) << char(219);
     }
     void dibujaJugador_Abajo_m1_v1(int x, int y) {
-        p(x + 2, y); b_c(1), f_c(15); cout << char(219) << char(219) << char(219) << char(219);
+        p(x + 2, y); b_c(8), f_c(15); cout << char(219) << char(219) << char(219) << char(219);
         p(x, y + 1); cout << char(220) << char(220) << char(219) << char(219) << char(219) << char(219) << char(220) << char(220);
         p(x, y + 2); cout << char(223) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(223);
         p(x + 2, y + 3); cout << char(223) << char(219) << char(219) << char(223);
@@ -97,22 +98,52 @@ public:
         p(x, y + 3); cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(220);
     }
     void borrarJugador_m1_v1(int x, int y) {
-        p(x, y); b_c(1), f_c(15); cout << "        ";
+        p(x, y); b_c(8), f_c(15); cout << "        ";
         p(x, y + 1); cout << "        ";
         p(x, y + 2); cout << "        ";
         p(x, y + 3); cout << "        ";
     }
-    
+
+    void dibujaJugador_Izquierda_m1_v1_i1(int x, int y) {
+        p(x + 2, y); b_c(1), f_c(15); cout << char(220) << char(219) << char(219);
+        p(x, y + 1); cout << char(220) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219);
+        p(x, y + 2); cout << char(223) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219);
+        p(x + 2, y + 3); cout << char(223) << char(219) << char(219);
+    }
+    void dibujaJugador_Arriba_m1_v1_i1(int x, int y) {
+        p(x + 2, y); b_c(1), f_c(15); cout << char(220) << char(219) << char(219) << char(220);
+        p(x, y + 1); cout << char(220) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(220);
+        p(x, y + 2); cout << char(223) << char(223) << char(219) << char(219) << char(219) << char(219) << char(223) << char(223);
+        p(x + 2, y + 3); cout << char(219) << char(219) << char(219) << char(219);
+    }
+    void dibujaJugador_Derecha_m1_v1_i1(int x, int y) {
+        p(x + 3, y); b_c(1), f_c(15); cout << char(219) << char(219) << char(220);
+        p(x, y + 1); cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(220);
+        p(x, y + 2); cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(223);
+        p(x + 3, y + 3); cout << char(219) << char(219) << char(223);
+    }
+    void dibujaJugador_Abajo_m1_v1_i1(int x, int y) {
+        p(x + 2, y); b_c(1), f_c(15); cout << char(219) << char(219) << char(219) << char(219);
+        p(x, y + 1); cout << char(220) << char(220) << char(219) << char(219) << char(219) << char(219) << char(220) << char(220);
+        p(x, y + 2); cout << char(223) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(223);
+        p(x + 2, y + 3); cout << char(223) << char(219) << char(219) << char(223);
+    }
+
     void dibujarJugador() {
         b_c(1), f_c(15);
-        if (btnW) {
-            dibujaJugador_Arriba_m1_v1(xJ, yJ);
-        } else if (btnA) {
-            dibujaJugador_Izquierda_m1_v1(xJ, yJ);
-        } else if (btnS) {
-            dibujaJugador_Abajo_m1_v1(xJ, yJ);
-        } else if (btnD) {
-            dibujaJugador_Derecha_m1_v1(xJ, yJ);
+        if (dxJ != 0 || dyJ != 0) {
+            if (btnW) {
+                dibujaJugador_Arriba_m1_v1(xJ, yJ);
+            }
+            else if (btnA) {
+                dibujaJugador_Izquierda_m1_v1(xJ, yJ);
+            }
+            else if (btnS) {
+                dibujaJugador_Abajo_m1_v1(xJ, yJ);
+            }
+            else if (btnD) {
+                dibujaJugador_Derecha_m1_v1(xJ, yJ);
+            }
         }
         b_c(1), f_c(16);
     }
@@ -142,28 +173,28 @@ public:
             keySActive = false;
             keyDActive = true;
         }
-        if (keyWActive && yJ > 1) {
+        if (keyWActive && yJ > 3) {
             yJ -= dyJ;
             this->btnW = true;
             this->btnA = false;
             this->btnS = false;
             this->btnD = false;
         }
-        if (keyAActive && xJ > 2) {
+        if (keyAActive && xJ > 18) {
             xJ -= dxJ;
             this->btnW = false;
             this->btnA = true;
             this->btnS = false;
             this->btnD = false;
         }
-        if (keySActive && yJ < 25) {
+        if (keySActive && yJ < 72 - 4) { // - 4 Por el tamaño del jugador
             yJ += dyJ;
             this->btnW = false;
             this->btnA = false;
             this->btnS = true;
             this->btnD = false;
         }
-        if (keyDActive && xJ < 130) {
+        if (keyDActive && xJ < 132 - 8) { // - 8 Por el tamaño del jugador
             xJ += dxJ;
             this->btnW = false;
             this->btnA = false;

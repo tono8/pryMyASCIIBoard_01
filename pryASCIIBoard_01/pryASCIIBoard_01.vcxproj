@@ -116,7 +116,6 @@
   <ItemGroup>
     <ClInclude Include="hBoard.h" />
     <ClInclude Include="hDependencias.h" />
-    <ClInclude Include="hEntidad.h" />
     <ClInclude Include="hGraficos.h" />
     <ClInclude Include="hJugador.h" />
   </ItemGroup>

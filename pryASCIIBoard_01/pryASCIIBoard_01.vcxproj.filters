@@ -26,9 +26,6 @@
     <ClInclude Include="hBoard.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="hEntidad.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="hJugador.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
